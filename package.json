@@ -39,9 +39,9 @@
 		]
 	},
 	"dependencies": {
+		"@xhmikosr/downloader": "^9.0.0",
 		"bin-check": "^4.1.0",
 		"bin-version-check": "^5.0.0",
-		"download": "^8.0.0",
 		"os-filter-obj": "^2.0.0"
 	},
 	"devDependencies": {
