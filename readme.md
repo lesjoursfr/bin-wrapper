@@ -6,7 +6,7 @@
 ## Install
 
 ```sh
-npm install bin-wrapper
+npm install @xhmikosr/bin-wrapper
 ```
 
 
@@ -14,7 +14,7 @@ npm install bin-wrapper
 
 ```js
 import path from 'node:path';
-import BinWrapper from 'bin-wrapper';
+import BinWrapper from '@xhmikosr/bin-wrapper';
 
 const base = 'https://github.com/imagemin/gifsicle-bin/raw/main/vendor';
 const bin = new BinWrapper()
