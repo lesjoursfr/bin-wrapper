@@ -124,7 +124,7 @@ export default class BinWrapper {
 	runCheck(cmd) {
 		return binCheck(this.path(), cmd).then(works => {
 			if (!works) {
-				throw new Error(`The \`${this.path()}\` binary doesn't seem to work correctly`);
+				throw new Error(`The "${this.path()}" binary doesn't seem to work correctly`);
 			}
 
 			if (this.version()) {
@@ -140,7 +140,7 @@ export default class BinWrapper {
 	 */
 	findExisting() {
 		return fs.stat(this.path()).catch(error => {
-			if (error && error.code === 'ENOENT') {
+			if (error?.code === 'ENOENT') {
 				return this.download();
 			}
 
@@ -165,11 +165,13 @@ export default class BinWrapper {
 			urls.push(file.url);
 		}
 
-		return Promise.all(urls.map(url => download(url, this.dest(), {
-			extract: true,
-			strip: this.options.strip,
-		}))).then(result => {
-			const resultingFiles = result.flatMap((item, index) => {
+		return Promise.all(
+			urls.map(url => download(url, this.dest(), {
+				extract: true,
+				strip: this.options.strip,
+			})),
+		).then(result => {
+			const resultFiles = result.flatMap((item, index) => {
 				if (Array.isArray(item)) {
 					return item.map(file => file.path);
 				}
@@ -180,7 +182,9 @@ export default class BinWrapper {
 				return parsedPath.base;
 			});
 
-			return Promise.all(resultingFiles.map(fileName => fs.chmod(path.join(this.dest(), fileName), 0o755)));
+			return Promise.all(
+				resultFiles.map(file => fs.chmod(path.join(this.dest(), file), 0o755)),
+			);
 		});
 	}
 }
