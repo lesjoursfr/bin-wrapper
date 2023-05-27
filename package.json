@@ -13,7 +13,7 @@
 		"url": "https://github.com/kevva"
 	},
 	"engines": {
-		"node": "^12.20.0 || ^14.14.0 || >=16.0.0"
+		"node": "^14.14.0 || >=16.0.0"
 	},
 	"scripts": {
 		"ava": "ava",
