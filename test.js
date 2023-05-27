@@ -1,20 +1,17 @@
-import fs from 'node:fs';
+import fs, {promises as fsPromises} from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
-import {promisify} from 'node:util';
 import {fileURLToPath} from 'node:url';
 import executable from 'executable';
 import nock from 'nock';
 import {pathExists} from 'path-exists';
-import rimraf from 'rimraf';
-import tempy from 'tempy';
+import {temporaryDirectory} from 'tempy';
 import test from 'ava';
 import BinWrapper from './index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const rimrafP = promisify(rimraf);
 const fixture = path.join.bind(path, __dirname, 'fixtures');
 
 test.beforeEach(() => {
@@ -69,24 +66,24 @@ test('get the binary path', t => {
 test('verify that a binary is working', async t => {
 	const bin = new BinWrapper()
 		.src('http://foo.com/gifsicle.tar.gz')
-		.dest(tempy.directory())
+		.dest(temporaryDirectory())
 		.use(process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle');
 
 	await bin.run();
 	t.true(await pathExists(bin.path()));
-	await rimrafP(bin.dest());
+	await fsPromises.rm(bin.dest(), {force: true, recursive: true});
 });
 
 test('meet the desired version', async t => {
 	const bin = new BinWrapper()
 		.src('http://foo.com/gifsicle.tar.gz')
-		.dest(tempy.directory())
+		.dest(temporaryDirectory())
 		.use(process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle')
 		.version('>=1.71');
 
 	await bin.run();
 	t.true(await pathExists(bin.path()));
-	await rimrafP(bin.dest());
+	await fsPromises.rm(bin.dest(), {force: true, recursive: true});
 });
 
 test('download files even if they are not used', async t => {
@@ -94,7 +91,7 @@ test('download files even if they are not used', async t => {
 		.src('http://foo.com/gifsicle-darwin.tar.gz')
 		.src('http://foo.com/gifsicle-win32.tar.gz')
 		.src('http://foo.com/test.js')
-		.dest(tempy.directory())
+		.dest(temporaryDirectory())
 		.use(process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle');
 
 	await bin.run();
@@ -105,23 +102,23 @@ test('download files even if they are not used', async t => {
 	t.is(files[1], 'gifsicle.exe');
 	t.is(files[2], 'test.js');
 
-	await rimrafP(bin.dest());
+	await fsPromises.rm(bin.dest(), {force: true, recursive: true});
 });
 
 test('skip running binary check', async t => {
 	const bin = new BinWrapper({skipCheck: true})
 		.src('http://foo.com/gifsicle.tar.gz')
-		.dest(tempy.directory())
+		.dest(temporaryDirectory())
 		.use(process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle');
 
 	await bin.run(['--shouldNotFailAnyway']);
 	t.true(await pathExists(bin.path()));
-	await rimrafP(bin.dest());
+	await fsPromises.rm(bin.dest(), {force: true, recursive: true});
 });
 
 test('error if no binary is found and no source is provided', async t => {
 	const bin = new BinWrapper()
-		.dest(tempy.directory())
+		.dest(temporaryDirectory())
 		.use(process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle');
 
 	await t.throwsAsync(bin.run(), undefined, 'No binary found matching your system. It\'s probably not supported.');
@@ -132,7 +129,7 @@ test('downloaded files are set to be executable', async t => {
 		.src('http://foo.com/gifsicle-darwin.tar.gz')
 		.src('http://foo.com/gifsicle-win32.tar.gz')
 		.src('http://foo.com/test.js')
-		.dest(tempy.directory())
+		.dest(temporaryDirectory())
 		.use(process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle');
 
 	await bin.run();
