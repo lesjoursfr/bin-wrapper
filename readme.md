@@ -1,4 +1,4 @@
-# bin-wrapper [![CI](https://github.com/XhmikosR/bin-wrapper/actions/workflows/ci.yml/badge.svg)](https://github.com/XhmikosR/bin-wrapper/actions/workflows/ci.yml)
+# bin-wrapper [![CI](https://github.com/XhmikosR/bin-wrapper/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/XhmikosR/bin-wrapper/actions/workflows/ci.yml)
 
 > Binary wrapper that makes your programs seamlessly available as local dependencies
 
