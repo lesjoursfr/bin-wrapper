@@ -37,13 +37,6 @@
 		"local",
 		"wrapper"
 	],
-	"c8": {
-		"reporter": [
-			"html",
-			"lcovonly",
-			"text"
-		]
-	},
 	"dependencies": {
 		"@xhmikosr/downloader": "^10.0.1",
 		"bin-check": "^4.1.0",
