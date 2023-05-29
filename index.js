@@ -124,7 +124,9 @@ export default class BinWrapper {
 	runCheck(cmd) {
 		return binCheck(this.path(), cmd).then(works => {
 			if (!works) {
-				throw new Error(`The "${this.path()}" binary doesn't seem to work correctly`);
+				throw new Error(
+					`The "${this.path()}" binary doesn't seem to work correctly`,
+				);
 			}
 
 			if (this.version()) {
@@ -157,7 +159,11 @@ export default class BinWrapper {
 		const files = osFilterObject(this.src() || []);
 
 		if (files.length === 0) {
-			return Promise.reject(new Error('No binary found matching your system. It\'s probably not supported.'));
+			return Promise.reject(
+				new Error(
+					'No binary found matching your system. It\'s probably not supported.',
+				),
+			);
 		}
 
 		const urls = [];
@@ -166,10 +172,12 @@ export default class BinWrapper {
 		}
 
 		return Promise.all(
-			urls.map(url => download(url, this.dest(), {
-				extract: true,
-				strip: this.options.strip,
-			})),
+			urls.map(url =>
+				download(url, this.dest(), {
+					extract: true,
+					strip: this.options.strip,
+				}),
+			),
 		).then(result => {
 			const resultFiles = result.flatMap((item, index) => {
 				if (Array.isArray(item)) {

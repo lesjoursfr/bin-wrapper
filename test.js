@@ -124,7 +124,11 @@ test('error if no binary is found and no source is provided', async t => {
 		.dest(temporaryDirectory())
 		.use(binary);
 
-	await t.throwsAsync(bin.run(), undefined, 'No binary found matching your system. It\'s probably not supported.');
+	await t.throwsAsync(
+		bin.run(),
+		undefined,
+		'No binary found matching your system. It\'s probably not supported.',
+	);
 });
 
 test('downloaded files are set to be executable', async t => {
@@ -139,5 +143,7 @@ test('downloaded files are set to be executable', async t => {
 
 	const files = fs.readdirSync(bin.dest());
 
-	await t.true(files.every(async file => executable(path.join(bin.dest(), file))));
+	await t.true(
+		files.every(async file => executable(path.join(bin.dest(), file))),
+	);
 });
