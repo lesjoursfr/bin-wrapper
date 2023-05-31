@@ -38,15 +38,15 @@
 		"wrapper"
 	],
 	"dependencies": {
-		"@xhmikosr/bin-check": "^5.0.0",
+		"@xhmikosr/bin-check": "^5.0.1",
 		"@xhmikosr/downloader": "^10.0.2",
 		"bin-version-check": "^5.0.0",
 		"os-filter-obj": "^2.0.0"
 	},
 	"devDependencies": {
+		"@xhmikosr/executable": "^5.0.0",
 		"ava": "^5.3.0",
 		"c8": "^7.14.0",
-		"executable": "^4.1.1",
 		"nock": "^13.3.1",
 		"path-exists": "^5.0.0",
 		"tempy": "^3.0.0",

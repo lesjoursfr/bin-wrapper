@@ -2,7 +2,7 @@ import fs, {promises as fsPromises} from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import {fileURLToPath} from 'node:url';
-import executable from 'executable';
+import executable from '@xhmikosr/executable';
 import nock from 'nock';
 import {pathExists} from 'path-exists';
 import {temporaryDirectory} from 'tempy';
