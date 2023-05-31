@@ -38,8 +38,8 @@
 		"wrapper"
 	],
 	"dependencies": {
+		"@xhmikosr/bin-check": "^5.0.0",
 		"@xhmikosr/downloader": "^10.0.2",
-		"bin-check": "^4.1.0",
 		"bin-version-check": "^5.0.0",
 		"os-filter-obj": "^2.0.0"
 	},
