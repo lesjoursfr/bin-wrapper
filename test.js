@@ -1,4 +1,4 @@
-import fs, {promises as fsPromises} from 'node:fs';
+import fs, {promises as fsP} from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import {fileURLToPath} from 'node:url';
@@ -15,7 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const fixture = path.join.bind(path, __dirname, 'fixtures');
 const binary = process.platform === 'win32' ? 'gifsicle.exe' : 'gifsicle';
 
-const removeTestDir = async bin => fsPromises.rm(bin.dest(), {force: true, recursive: true});
+const removeTestDir = async bin => fsP.rm(bin.dest(), {force: true, recursive: true});
 
 test.beforeEach(() => {
 	nock('http://foo.com')
