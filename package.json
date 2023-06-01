@@ -39,7 +39,7 @@
 	],
 	"dependencies": {
 		"@xhmikosr/bin-check": "^5.0.2",
-		"@xhmikosr/downloader": "^11.0.0",
+		"@xhmikosr/downloader": "^11.0.2",
 		"bin-version-check": "^5.0.0",
 		"os-filter-obj": "^2.0.0"
 	},
