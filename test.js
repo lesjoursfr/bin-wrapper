@@ -2,7 +2,7 @@ import fs, {promises as fsP} from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import {fileURLToPath} from 'node:url';
-import executable from '@xhmikosr/executable';
+import isexe from 'isexe';
 import nock from 'nock';
 import {pathExists} from 'path-exists';
 import {temporaryDirectory} from 'tempy';
@@ -144,6 +144,6 @@ test('downloaded files are set to be executable', async t => {
 	const files = fs.readdirSync(bin.dest());
 
 	await t.true(
-		files.every(async file => executable(path.join(bin.dest(), file))),
+		files.every(async file => isexe(path.join(bin.dest(), file))),
 	);
 });
