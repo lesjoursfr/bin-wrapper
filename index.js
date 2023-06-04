@@ -175,7 +175,9 @@ export default class BinWrapper {
 			urls.map(url =>
 				download(url, this.dest(), {
 					extract: true,
-					strip: this.options.strip,
+					decompress: {
+						strip: this.options.strip,
+					},
 				}),
 			),
 		).then(result => {
