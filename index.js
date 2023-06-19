@@ -36,11 +36,7 @@ export default class BinWrapper {
 		}
 
 		this._src = this._src || [];
-		this._src.push({
-			url: src,
-			os,
-			arch,
-		});
+		this._src.push({url: src, os, arch});
 
 		return this;
 	}
