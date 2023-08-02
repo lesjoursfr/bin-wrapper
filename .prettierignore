@@ -1,0 +1,11 @@
+# Generated files
+lib
+
+# Tests files
+tests/fixtures
+
+# Yarn & node.js dependencies
+package.json
+node_modules/
+.pnp.*
+.yarn/*

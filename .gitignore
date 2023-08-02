@@ -1,3 +1,15 @@
-node_modules
+# Generated files
+lib
+
+# Yarn lockfile
 yarn.lock
-/coverage
+
+# Yarn & node.js dependencies
+node_modules/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

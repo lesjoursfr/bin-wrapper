@@ -1,0 +1,31 @@
+{
+	"search.exclude": {
+		"**/.git/**": true,
+		"**/node_modules/**": true,
+		"**/.yarn/**": true
+	},
+	"files.exclude": {
+		"**/.git/**": true,
+		"**/node_modules/**": true,
+		"**/.yarn/**": true
+	},
+	"files.watcherExclude": {
+		"**/.git/**": true,
+		"**/node_modules/**": true,
+		"**/.yarn/**": true
+	},
+	"eslint.format.enable": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.organizeImports": true
+	}
+}
