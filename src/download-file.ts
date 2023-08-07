@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios";
 import { parse as parseContentDisposition } from "content-disposition";
 import { fileTypeFromBuffer } from "file-type";
 import fs, { promises as fsP } from "fs";
-import { dirname, join as joinPath, resolve as resolvePath } from "path";
+import { basename, dirname, join as joinPath, resolve as resolvePath } from "path";
 import { Readable, Transform, TransformCallback } from "stream";
 import { x as extract } from "tar";
 
@@ -17,7 +17,7 @@ function getFilename(res: AxiosResponse): string {
     }
   }
 
-  return new URL(res.request.res.responseUrl).pathname;
+  return basename(new URL(res.request.res.responseUrl).pathname);
 }
 
 async function isTarFile(data: Buffer): Promise<boolean> {
