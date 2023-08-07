@@ -1,14 +1,14 @@
 /**
  * Source : https://github.com/sindresorhus/bin-version-check
  */
-import binaryVersion, { Options as BinaryVersionCheckOptions } from "bin-version";
+import binaryVersion, { BinaryVersionOptions } from "@lesjoursfr/bin-version";
 import semver from "semver";
 import semverTruncate from "semver-truncate";
 
 export async function binVersionCheck(
   binary: string,
   semverRange: string,
-  options?: BinaryVersionCheckOptions
+  options?: BinaryVersionOptions
 ): Promise<void> {
   if (typeof binary !== "string" || typeof semverRange !== "string") {
     throw new TypeError("`binary` and `semverRange` arguments required");
