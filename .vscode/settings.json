@@ -34,7 +34,7 @@
 		"source.organizeImports": "explicit"
 	},
 	"eslint.enable": true,
-	"eslint.format.enable": false,
+	"eslint.format.enable": true,
 	"prettier.configPath": ".prettierrc.js",
 	"prettier.ignorePath": ".prettierignore",
 	"css.validate": false,
