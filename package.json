@@ -45,8 +45,8 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-check": "^7.1.4",
-		"@lesjoursfr/bin-version": "^7.1.4",
+		"@lesjoursfr/bin-check": "^7.1.5",
+		"@lesjoursfr/bin-version": "^7.1.5",
 		"arch": "^2.2.0",
 		"axios": "^1.6.7",
 		"content-disposition": "^0.5.4",
