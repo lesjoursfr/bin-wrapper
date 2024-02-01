@@ -8,6 +8,12 @@ const config = {
         printWidth: 80,
       },
     },
+    {
+      files: ["tsconfig.json"],
+      options: {
+        trailingComma: "none",
+      },
+    },
   ],
 };
 
