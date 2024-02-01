@@ -3,7 +3,7 @@ const config = {
   trailingComma: "es5",
   overrides: [
     {
-      files: [".eslintrc.js", ".prettierrc.js", "*.json", "*.md"],
+      files: [".eslintrc.*", ".prettierrc.*", "*.json", "*.md"],
       options: {
         printWidth: 80,
       },
