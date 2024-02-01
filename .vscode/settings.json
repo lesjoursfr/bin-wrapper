@@ -14,7 +14,6 @@
 		"**/node_modules/**": true,
 		"**/.yarn/**": true
 	},
-	"eslint.format.enable": true,
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -27,5 +26,8 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit",
 		"source.organizeImports": "explicit"
-	}
+	},
+	"eslint.format.enable": true,
+	"prettier.configPath": ".prettierrc.js",
+	"prettier.ignorePath": ".prettierignore"
 }
