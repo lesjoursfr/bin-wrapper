@@ -48,31 +48,31 @@
 		"@lesjoursfr/bin-check": "^7.1.5",
 		"@lesjoursfr/bin-version": "^7.1.5",
 		"arch": "^3.0.0",
-		"axios": "^1.6.7",
+		"axios": "^1.6.8",
 		"content-disposition": "^0.5.4",
 		"file-type": "^19.0.0",
 		"semver": "^7.6.0",
 		"semver-truncate": "^3.0.0",
-		"tar": "^6.2.0"
+		"tar": "^6.2.1"
 	},
 	"devDependencies": {
-		"@tsconfig/node18": "^18.2.2",
+		"@tsconfig/node18": "^18.2.4",
 		"@types/content-disposition": "^0.5.8",
 		"@types/mocha": "^10.0.6",
-		"@types/node": "^20.11.21",
+		"@types/node": "^20.11.30",
 		"@types/semver": "^7.5.8",
 		"@types/tar": "^6.1.11",
-		"@typescript-eslint/eslint-plugin": "^7.1.0",
-		"@typescript-eslint/parser": "^7.1.0",
+		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@typescript-eslint/parser": "^7.4.0",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"isexe": "^3.1.1",
-		"mocha": "^10.3.0",
+		"mocha": "^10.4.0",
 		"nock": "^13.5.4",
 		"prettier": "^3.2.5",
 		"tempy": "^3.1.0",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.3.3"
+		"typescript": "^5.4.3"
 	},
-	"packageManager": "yarn@4.1.0"
+	"packageManager": "yarn@4.1.1"
 }
