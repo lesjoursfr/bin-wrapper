@@ -46,7 +46,7 @@ class FileDownloader extends Transform {
     this.outputDir = dirname(this.outputFilepath);
   }
 
-  public async _transform(chunk: Buffer, encoding: BufferEncoding, callback: TransformCallback): Promise<void> {
+  public async _transform(chunk: Buffer, _encoding: BufferEncoding, callback: TransformCallback): Promise<void> {
     if (this._isTarFile !== null) {
       callback(null, chunk);
       return;
@@ -90,7 +90,11 @@ export async function downloadFile(url: string, dest: string, options: { strip: 
 
   return new Promise<Array<string>>((resolve, reject) => {
     const fileDownloader = new FileDownloader(dest, filename, options, (err, files) => {
-      err !== null ? reject(err) : resolve(files);
+      if (err !== null) {
+        reject(err);
+      } else {
+        resolve(files);
+      }
     });
 
     response.data.pipe(fileDownloader);
