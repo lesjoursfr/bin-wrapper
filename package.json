@@ -50,7 +50,7 @@
 		"arch": "^3.0.0",
 		"axios": "^1.7.4",
 		"content-disposition": "^0.5.4",
-		"file-type": "^19.4.0",
+		"file-type": "^19.4.1",
 		"semver": "^7.6.3",
 		"semver-truncate": "^3.0.0",
 		"tar": "^7.4.3"
@@ -60,7 +60,7 @@
 		"@tsconfig/node20": "^20.1.4",
 		"@types/content-disposition": "^0.5.8",
 		"@types/mocha": "^10.0.7",
-		"@types/node": "^20.14.15",
+		"@types/node": "^20.16.1",
 		"@types/semver": "^7.5.8",
 		"@types/tar": "^6.1.13",
 		"eslint": "^9.9.0",
@@ -68,12 +68,12 @@
 		"globals": "^15.9.0",
 		"isexe": "^3.1.1",
 		"mocha": "^10.7.3",
-		"nock": "^13.5.4",
+		"nock": "^13.5.5",
 		"prettier": "^3.3.3",
 		"tempy": "^3.1.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.5.4",
-		"typescript-eslint": "^8.1.0"
+		"typescript-eslint": "^8.2.0"
 	},
 	"packageManager": "yarn@4.4.0"
 }
