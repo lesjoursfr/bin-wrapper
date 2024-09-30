@@ -56,14 +56,14 @@
 		"tar": "^7.4.3"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.11.0",
+		"@eslint/js": "^9.11.1",
 		"@tsconfig/node20": "^20.1.4",
 		"@types/content-disposition": "^0.5.8",
 		"@types/mocha": "^10.0.8",
-		"@types/node": "^20.16.5",
+		"@types/node": "^20.16.10",
 		"@types/semver": "^7.5.8",
 		"@types/tar": "^6.1.13",
-		"eslint": "^9.11.0",
+		"eslint": "^9.11.1",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.9.0",
 		"isexe": "^3.1.1",
@@ -73,7 +73,7 @@
 		"tempy": "^3.1.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.6.2",
-		"typescript-eslint": "^8.6.0"
+		"typescript-eslint": "^8.7.0"
 	},
 	"packageManager": "yarn@4.5.0"
 }
