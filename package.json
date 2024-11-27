@@ -48,7 +48,7 @@
 		"@lesjoursfr/bin-check": "^7.1.6",
 		"@lesjoursfr/bin-version": "^7.1.6",
 		"arch": "^3.0.0",
-		"axios": "^1.7.7",
+		"axios": "^1.7.8",
 		"content-disposition": "^0.5.4",
 		"file-type": "^19.6.0",
 		"semver": "^7.6.3",
@@ -60,7 +60,7 @@
 		"@tsconfig/node20": "^20.1.4",
 		"@types/content-disposition": "^0.5.8",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^22.9.3",
+		"@types/node": "^22.10.0",
 		"@types/semver": "^7.5.8",
 		"@types/tar": "^6.1.13",
 		"eslint": "^9.15.0",
@@ -69,11 +69,11 @@
 		"isexe": "^3.1.1",
 		"mocha": "^10.8.2",
 		"nock": "^13.5.6",
-		"prettier": "^3.3.3",
+		"prettier": "^3.4.1",
 		"tempy": "^3.1.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.7.2",
-		"typescript-eslint": "^8.15.0"
+		"typescript-eslint": "^8.16.0"
 	},
-	"packageManager": "yarn@4.5.2"
+	"packageManager": "yarn@4.5.3"
 }
