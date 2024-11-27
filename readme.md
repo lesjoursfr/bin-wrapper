@@ -52,15 +52,15 @@ Type: `Object`
 
 ##### skipCheck
 
--   Type: `boolean`
--   Default: `false`
+- Type: `boolean`
+- Default: `false`
 
 Whether to skip the binary check or not.
 
 ##### strip
 
--   Type: `number`
--   Default: `1`
+- Type: `number`
+- Default: `1`
 
 Strip a number of leading paths from file names on extraction.
 
@@ -122,8 +122,8 @@ using the URL provided in `.addSrc()`.
 
 #### arguments
 
--   Type: `Array`
--   Default: `['--version']`
+- Type: `Array`
+- Default: `['--version']`
 
 Command to run the binary with. If it exits with code `0` it means that the
 binary is working.
