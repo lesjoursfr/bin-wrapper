@@ -19,7 +19,7 @@
 		"url": "https://github.com/kevva"
 	},
 	"engines": {
-		"node": "20.x || 22.x"
+		"node": "20.x || 22.x || 24.x"
 	},
 	"exports": "./lib/index.js",
 	"types": "./lib/index.d.ts",
