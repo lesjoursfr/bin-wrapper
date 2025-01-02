@@ -1,6 +1,6 @@
 {
 	"name": "@lesjoursfr/bin-wrapper",
-	"version": "12.1.8",
+	"version": "12.1.9",
 	"description": "Binary wrapper that makes your programs seamlessly available as local dependencies",
 	"license": "MIT",
 	"repository": {
