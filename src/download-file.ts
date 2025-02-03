@@ -55,26 +55,34 @@ class FileDownloader extends Transform {
     await fsP.mkdir(this.outputDir, { recursive: true });
 
     this._isTarFile = await isTarFile(chunk);
-    const outputStream = this._isTarFile
-      ? extract({
-          cwd: this.outputDir,
-          strip: this.extractOpts.strip,
-          onentry: (entry) => {
-            this.downloadedFiles.push(joinPath(this.outputDir, entry.path));
-          },
-        })
-      : fs.createWriteStream(this.outputFilepath);
-    if (!this._isTarFile) {
-      this.downloadedFiles.push(this.outputFilepath);
-    }
-    this.pipe(outputStream);
+    if (this._isTarFile) {
+      const outputStream = extract({
+        cwd: this.outputDir,
+        strip: this.extractOpts.strip,
+        onentry: (entry) => {
+          this.downloadedFiles.push(joinPath(this.outputDir, entry.path));
+        },
+      });
+      this.pipe(outputStream);
 
-    outputStream.on("error", (err) => {
-      this.callback(err, []);
-    });
-    outputStream.on("close", () => {
-      this.callback(null, this.downloadedFiles);
-    });
+      outputStream.on("error", (err: Error) => {
+        this.callback(err, []);
+      });
+      outputStream.on("close", () => {
+        this.callback(null, this.downloadedFiles);
+      });
+    } else {
+      const outputStream = fs.createWriteStream(this.outputFilepath);
+      this.downloadedFiles.push(this.outputFilepath);
+      this.pipe(outputStream);
+
+      outputStream.on("error", (err: Error) => {
+        this.callback(err, []);
+      });
+      outputStream.on("close", () => {
+        this.callback(null, this.downloadedFiles);
+      });
+    }
 
     callback(null, chunk);
   }
