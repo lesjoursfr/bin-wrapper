@@ -26,7 +26,7 @@ async function isTarFile(data: Buffer): Promise<boolean> {
     return false;
   }
 
-  return ["tar", "gz"].includes(ret.ext);
+  return ["tar", "tar.gz"].includes(ret.ext);
 }
 
 class FileDownloader extends Transform {
