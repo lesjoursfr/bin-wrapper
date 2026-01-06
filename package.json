@@ -50,30 +50,30 @@
 		"arch": "^3.0.0",
 		"axios": "^1.13.2",
 		"content-disposition": "^1.0.1",
-		"file-type": "^21.1.1",
+		"file-type": "^21.2.0",
 		"semver": "^7.7.3",
 		"semver-truncate": "^3.0.0",
 		"tar": "^7.5.2"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.39.1",
+		"@eslint/js": "^9.39.2",
 		"@tsconfig/node22": "^22.0.5",
 		"@types/content-disposition": "^0.5.9",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^24.10.1",
+		"@types/node": "^24.10.4",
 		"@types/semver": "^7.7.1",
 		"@types/tar": "^6.1.13",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
 		"globals": "^17.0.0",
 		"isexe": "^3.1.1",
 		"mocha": "^11.7.5",
 		"nock": "^14.0.10",
-		"prettier": "^3.7.3",
+		"prettier": "^3.7.4",
 		"tempy": "^3.1.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.48.0"
+		"typescript-eslint": "^8.51.0"
 	},
 	"packageManager": "yarn@4.12.0"
 }
