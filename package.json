@@ -1,6 +1,6 @@
 {
 	"name": "@lesjoursfr/bin-wrapper",
-	"version": "13.0.3",
+	"version": "13.0.4",
 	"description": "Binary wrapper that makes your programs seamlessly available as local dependencies",
 	"license": "MIT",
 	"repository": {
@@ -45,8 +45,8 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-check": "^8.0.2",
-		"@lesjoursfr/bin-version": "^8.0.2",
+		"@lesjoursfr/bin-check": "^8.0.3",
+		"@lesjoursfr/bin-version": "^8.0.3",
 		"arch": "^3.0.0",
 		"axios": "^1.13.2",
 		"content-disposition": "^1.0.1",
