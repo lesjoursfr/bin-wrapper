@@ -48,7 +48,7 @@
 		"@lesjoursfr/bin-check": "^8.0.3",
 		"@lesjoursfr/bin-version": "^8.0.3",
 		"arch": "^3.0.0",
-		"axios": "^1.13.4",
+		"axios": "^1.13.5",
 		"content-disposition": "^1.0.1",
 		"file-type": "^21.3.0",
 		"semver": "^7.7.4",
