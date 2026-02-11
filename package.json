@@ -60,7 +60,7 @@
 		"@tsconfig/node22": "22.0.5",
 		"@types/content-disposition": "0.5.9",
 		"@types/mocha": "10.0.10",
-		"@types/node": "24.10.11",
+		"@types/node": "24.10.12",
 		"@types/semver": "7.7.1",
 		"@types/tar": "6.1.13",
 		"eslint": "10.0.0",
