@@ -4,6 +4,7 @@
 	"description": "Binary wrapper that makes your programs seamlessly available as local dependencies",
 	"license": "MIT",
 	"repository": {
+		"type": "git",
 		"url": "git+https://github.com/lesjoursfr/bin-wrapper.git"
 	},
 	"homepage": "https://github.com/lesjoursfr/bin-wrapper#readme",
@@ -21,12 +22,15 @@
 	"engines": {
 		"node": "22.x || 24.x"
 	},
-	"exports": "./lib/index.js",
-	"types": "./lib/index.d.ts",
-	"files": [
-		"lib/**/*",
-		"src/**/*"
+	"keywords": [
+		"bin",
+		"check",
+		"local",
+		"wrapper"
 	],
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"type": "module",
 	"scripts": {
 		"freshlock": "rm -rf node_modules/ && rm .yarn/install-state.gz && rm yarn.lock && yarn",
 		"check-lint": "eslint",
@@ -37,16 +41,9 @@
 		"build": "tsc",
 		"test": "NODE_OPTIONS='--loader=ts-node/esm' mocha"
 	},
-	"keywords": [
-		"bin",
-		"check",
-		"local",
-		"wrapper"
-	],
-	"type": "module",
 	"dependencies": {
-		"@lesjoursfr/bin-check": "^8.1.0",
-		"@lesjoursfr/bin-version": "^8.1.0",
+		"@lesjoursfr/bin-check": "^8.1.1",
+		"@lesjoursfr/bin-version": "^8.1.1",
 		"arch": "^3.0.0",
 		"axios": "^1.15.2",
 		"content-disposition": "^1.1.0",
