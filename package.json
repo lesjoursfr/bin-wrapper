@@ -46,7 +46,7 @@
 		"@lesjoursfr/bin-version": "^8.1.2",
 		"arch": "^3.0.0",
 		"axios": "^1.20.0",
-		"content-disposition": "^2.0.1",
+		"content-disposition": "^3.0.0",
 		"file-type": "^22.1.1",
 		"semver": "^7.8.5",
 		"semver-truncate": "^3.0.0",
